@@ -1,10 +1,9 @@
-<h1>Welcome to Our Page</h1>
+<h1>Posts by Tags</h1>
 
-<% @posts.each do |post| %>
+<% @tags.each do |tag| %>
 	<div>
-		<h2><%= post.title %></h2>
-		<p> <%= post.description %> </p>
-		<p> <%= post.author %> </p>
-		<a href="/posts/<%= post.id %>">Show</a>
+		<p> <%= tag.name %>:
+		<a href="/tags/<%= tag.id %>">Show Affiliated Posts</a>
+		</p>
 	</div>
 <% end %>

@@ -9,6 +9,10 @@ Rails.application.routes.draw do
 
   get '/posts/:id', to: "posts#show"
 
+  get '/tags', to: 'tags#index'
+
+  get '/tags/:id', to: "tags#show"  
+
   root 'posts#index'
 
 end
