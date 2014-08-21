@@ -1,0 +1,12 @@
+<h1>Enter a New Post</h1>
+
+	<form action="/posts" method="post">
+	    <input type="text" name="post[title]" value="Title" autofocus>
+	    <input type="text" name="post[author]" value="Author" autofocus><br/>
+	    <textarea name="post[description]" rows="10" cols="33">Description</textarea><br/>
+	   	<input type="text" name="tag[name]" value="Tags" cols="33" autofocus><br/>    
+	    <%= token_tag form_authenticity_token %>
+	    <button> Save Post </button><br/>
+	</form>
+	
+	<button><a href="/posts/">Main Page</a></button>
